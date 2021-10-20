@@ -1,5 +1,5 @@
 # phylogenetic-tree-comparison
-Course: Comp 7934
+Course: Comp 7934   
 Students: Raquel Thiessen (7813231), Vasena Jayamanna (7902600)
 
 ## Setup
