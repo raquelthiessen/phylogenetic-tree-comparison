@@ -12,3 +12,7 @@ Run: `pip install -r requirements.txt`
 ## File Organization
 - The packages for the algorithms we are comparing are in the **packages** folder
 - Our code to run the comparison is in **src**
+
+## Useful links
+[SimPhy paper](https://pubmed.ncbi.nlm.nih.gov/26526427/)
+[SimPhy manual(github)](https://github.com/adamallo/SimPhy/wiki/Manual)
