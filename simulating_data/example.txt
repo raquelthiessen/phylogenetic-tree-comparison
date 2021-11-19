@@ -1,5 +1,8 @@
 See https://github.com/adamallo/SimPhy/wiki/Manual and online Supplementary Material of ASTRAL-Pro paper
 
+"A typical simulation scenario would start simulating a species tree, followed by the simulation of a 
+number of locus trees and the subsequent simulation of a gene tree per locus tree"
+
 
 Simphy command for default parameters:
 
