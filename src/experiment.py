@@ -6,12 +6,15 @@
 
 import os
 import subprocess
+import sys
+from contextlib import redirect_stdout
 from abc import ABC, abstractmethod
 
 # Constants
 data_dir = 'data_sets/gene-trees'
 result_dir = 'results'
-output_file_name = 'speciestree'
+output_file_name = 'speciestree.txt'
+output_log_file_name = 'out.log'
 
 
 class Package(ABC):
@@ -25,9 +28,10 @@ class Package(ABC):
         Parameters:
             input: the input file path
             output: the output file path
+            output_log: the log output file path
     """
     @abstractmethod
-    def run(self, input, output):
+    def run(self, input, output, output_log):
         pass
     
     """
@@ -61,8 +65,8 @@ class ASTRAL_PRO(Package):
         self.package_name = 'A-pro'
         self.running_dir = 'A-pro/ASTRAL-MP'
     
-    def run(self, input, output):
-        os.system('cd packages/{};java -D"java.library.path=lib/" -jar astral.1.1.6.jar -i {} > {}'.format(self.running_dir, input, output))
+    def run(self, input, output, output_log):
+        os.system('cd packages/{}; java -D"java.library.path=lib/" -jar astral.1.1.6.jar -i {} -o {} 2>{}'.format(self.running_dir, input, output, output_log))
 
     def clear_result_folder(self):
         os.system('rm -r results/{}/*'.format(self.package_name))
@@ -112,6 +116,7 @@ class PhylogeneticTreeExperiment():
         Returns:
             input_file: the input file path (absolute path)
             output_file: the output file path (absolute path)
+            output_log_file: the log output file path (absolute path)
     """
     def get_file_paths(self, subdir, file, package):
         file_path = os.path.join(subdir, file)
@@ -121,8 +126,9 @@ class PhylogeneticTreeExperiment():
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
         output_file = output_dir + "/" + output_file_name
+        output_log_file = output_dir + "/" + output_log_file_name
 
-        return input_file, output_file
+        return input_file, output_file, output_log_file
 
     """
         Main function to run the experiment
@@ -135,8 +141,8 @@ class PhylogeneticTreeExperiment():
                     continue
     
                 for package in self.packages:
-                    input_file, output_file = self.get_file_paths(subdir=subdir, file=file, package=package)
-                    package.run(input_file, output_file)
+                    input_file, output_file, output_log_file = self.get_file_paths(subdir=subdir, file=file, package=package)
+                    package.run(input_file, output_file, output_log_file)
 
     def run_analysis():
         for subdir, dirs, files in os.walk(result_dir):
