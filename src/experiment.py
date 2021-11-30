@@ -80,12 +80,11 @@ class ASTRAL_MP(Package):
         self.package_name = 'ASTRAL-MP'
         self.running_dir = 'ASTRAL-MP'
     
-    def run(self, input, output):
-        pass
+    def run(self, input, output, output_log):
+        os.system('cd packages/{}; java -D"java.library.path=lib/" -jar astral.5.15.4.jar -i {} -o {} 2>{}'.format(self.running_dir, input, output, output_log))
 
     def clear_result_folder(self):
         os.system('rm -r results/{}/*'.format(self.package_name))
-
 
 
 class PhylogeneticTreeExperiment():
@@ -95,7 +94,8 @@ class PhylogeneticTreeExperiment():
     def __init__(self):
         self.working_directory = subprocess.check_output("echo $PWD", shell=True).decode("utf-8").strip()
         self.a_pro = ASTRAL_PRO()
-        self.packages = [self.a_pro]
+        self.a_mp = ASTRAL_MP()
+        self.packages = [self.a_mp, self.a_pro]
         self.clear_folders()
 
     """
