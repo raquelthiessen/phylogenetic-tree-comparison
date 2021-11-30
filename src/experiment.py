@@ -6,8 +6,6 @@
 
 import os
 import subprocess
-import sys
-from contextlib import redirect_stdout
 from abc import ABC, abstractmethod
 
 # Constants
@@ -120,13 +118,14 @@ class PhylogeneticTreeExperiment():
     """
     def get_file_paths(self, subdir, file, package):
         file_path = os.path.join(subdir, file)
-        input_file = self.working_directory + "/" + file_path
-        output_dir = self.working_directory + "/" + result_dir + "/" + package.package_name + "/" + subdir
+        input_file = "/".join([self.working_directory, file_path])
+        output_dir = "/".join([self.working_directory, result_dir, package.package_name, subdir])
 
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
-        output_file = output_dir + "/" + output_file_name
-        output_log_file = output_dir + "/" + output_log_file_name
+
+        output_file = "/".join([output_dir, output_file_name])
+        output_log_file = "/".join([output_dir, output_log_file_name])
 
         return input_file, output_file, output_log_file
 
