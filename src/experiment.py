@@ -8,7 +8,7 @@ import os
 import subprocess
 from abc import ABC, abstractmethod
 
-# Constants
+# Naming Constants
 data_dir = 'data_sets/gene-trees'
 result_dir = 'results'
 output_file_name = 'speciestree.txt'
@@ -48,8 +48,8 @@ class wQFM(Package):
         self.package_name = 'wQFM'
         self.running_dir = 'wQFM'
     
-    def run(self, input, output):
-        pass
+    def run(self, input, output, output_log, q=2):
+        os.system('cd packages/{}; java -jar wQFM-v1.3.jar -i {} -o {} -im gene-trees -q {} -qo {}'.format(self.running_dir, input, output, output_log, q))
 
     def clear_result_folder(self):
         os.system('rm -r results/{}/*'.format(self.package_name))
