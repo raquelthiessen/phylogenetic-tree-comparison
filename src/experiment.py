@@ -55,7 +55,7 @@ class wQFM(Package):
         if track_memory:
             tracemalloc.start()
 
-        os.system('cd packages/{}; java -jar wQFM-v1.3.jar -i {} -o {} -im gene-trees -q {} -qo {}'.format(self.running_dir, input, output, q, output_log))
+        os.system('cd packages/{}; java -jar wQFM-v1.3.jar -i {} -o {} -im gene-trees -q {} 1>{}'.format(self.running_dir, input, output, q, output_log))
 
         if track_memory:
             _, peak = tracemalloc.get_traced_memory()
