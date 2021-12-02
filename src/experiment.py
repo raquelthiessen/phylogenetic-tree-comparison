@@ -7,12 +7,15 @@
 import os
 import subprocess
 from abc import ABC, abstractmethod
+import tracemalloc
 
 # Naming Constants
 data_dir = 'data_sets/gene-trees'
 result_dir = 'results'
 output_file_name = 'speciestree.txt'
 output_log_file_name = 'out.log'
+
+track_memory = True
 
 
 class Package(ABC):
@@ -49,7 +52,17 @@ class wQFM(Package):
         self.running_dir = 'wQFM'
     
     def run(self, input, output, output_log, q=2):
+        if track_memory:
+            tracemalloc.start()
+
         os.system('cd packages/{}; java -jar wQFM-v1.3.jar -i {} -o {} -im gene-trees -q {} -qo {}'.format(self.running_dir, input, output, q, output_log))
+
+        if track_memory:
+            _, peak = tracemalloc.get_traced_memory()
+            tracemalloc.stop()
+            f = open(output_log, "a")
+            f.write("Memory Peak: {}".format(peak))
+            f.close()
 
     def clear_result_folder(self):
         os.system('rm -r results/{}/*'.format(self.package_name))
@@ -62,10 +75,19 @@ class ASTRAL_PRO(Package):
     def __init__(self):
         self.package_name = 'A-pro'
         self.running_dir = 'A-pro/ASTRAL-MP'
-        self.memory = "-Xmx3000M" 
     
     def run(self, input, output, output_log):
-        os.system('cd packages/{}; java {} -D"java.library.path=lib/" -jar astral.1.1.6.jar -i {} -o {} 2>{}'.format(self.running_dir, self.memory, input, output, output_log))
+        if track_memory:
+            tracemalloc.start()
+
+        os.system('cd packages/{}; java -Xmx7000M -D"java.library.path=lib/" -jar astral.1.1.6.jar -i {} -o {} 2>{}'.format(self.running_dir, input, output, output_log))
+
+        if track_memory:
+            _, peak = tracemalloc.get_traced_memory()
+            tracemalloc.stop()
+            f = open(output_log, "a")
+            f.write("Memory Peak: {}".format(peak))
+            f.close()
 
     def clear_result_folder(self):
         os.system('rm -r results/{}/*'.format(self.package_name))
@@ -78,10 +100,20 @@ class ASTRAL_MP(Package):
     def __init__(self):
         self.package_name = 'ASTRAL-MP'
         self.running_dir = 'ASTRAL-MP'
-        self.memory = "-Xmx3000M" 
     
     def run(self, input, output, output_log):
-        os.system('cd packages/{}; java {} -D"java.library.path=lib/" -jar astral.5.15.4.jar -i {} -o {} 2>{}'.format(self.running_dir, self.memory, input, output, output_log))
+        if track_memory:
+            tracemalloc.start()
+
+        os.system('cd packages/{}; java -D"java.library.path=lib/" -jar astral.5.15.4.jar -i {} -o {} 2>{}'.format(self.running_dir, input, output, output_log))
+
+        if track_memory:
+            _, peak = tracemalloc.get_traced_memory()
+            tracemalloc.stop()
+            f = open(output_log, "a")
+            f.write("Memory Peak: {}".format(peak))
+            f.close()
+
 
     def clear_result_folder(self):
         os.system('rm -r results/{}/*'.format(self.package_name))
@@ -96,7 +128,7 @@ class PhylogeneticTreeExperiment():
         self.a_pro = ASTRAL_PRO()
         self.a_mp = ASTRAL_MP()
         self.wQFM = wQFM()
-        self.packages = [self.wQFM, self.a_mp, self.a_pro]
+        self.packages = [self.a_pro, self.a_mp, self.wQFM]
         self.clear_folders()
 
     """
