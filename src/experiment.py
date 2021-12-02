@@ -49,7 +49,7 @@ class wQFM(Package):
         self.running_dir = 'wQFM'
     
     def run(self, input, output, output_log, q=2):
-        os.system('cd packages/{}; java -jar wQFM-v1.3.jar -i {} -o {} -im gene-trees -q {} -qo {}'.format(self.running_dir, input, output, output_log, q))
+        os.system('cd packages/{}; java -jar wQFM-v1.3.jar -i {} -o {} -im gene-trees -q {} -qo {}'.format(self.running_dir, input, output, q, output_log))
 
     def clear_result_folder(self):
         os.system('rm -r results/{}/*'.format(self.package_name))
@@ -93,7 +93,8 @@ class PhylogeneticTreeExperiment():
         self.working_directory = subprocess.check_output("echo $PWD", shell=True).decode("utf-8").strip()
         self.a_pro = ASTRAL_PRO()
         self.a_mp = ASTRAL_MP()
-        self.packages = [self.a_mp, self.a_pro]
+        self.wQFM = wQFM()
+        self.packages = [self.wQFM, self.a_mp, self.a_pro]
         self.clear_folders()
 
     """
