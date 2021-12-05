@@ -1,3 +1,9 @@
+"""
+    File: Main File
+    Course: Comp 7934
+    Authors: Raquel Thiessen, Vasena Jayamanna
+"""
+
 from experiment import PhylogeneticTreeExperiment
 
 def main():
