@@ -1,0 +1,84 @@
+
+================== ASTRAL-Pro ===================== 
+
+This is ASTRAL-Pro (A-Pro) version 1.1.6
+Using native AVX batch computing.
+Gene trees are treated as unrooted
+There are 2 threads used to run.
+ti: 3
+tx: 3
+pw: 4
+The number of input tree read is 15
+270 trees read from /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/data_sets/gene-trees/model.11taxon/simulated_15genes_strongILS/R2/all_gt.tre
+15 extra trees.
+All output trees will be *arbitrarily* rooted at 8.8
+
+======== Running the main analysis
+Number of taxa: 11 (11 species)
+Taxa: [8.8, 7.7, 9.9, 5.5, 6.6, 10.10, 3.3, 2.2, 4.4, 1.1, 11.11]
+Taxon occupancy: {7.7=270, 8.8=270, 9.9=270, 1.1=270, 2.2=270, 10.10=270, 11.11=270, 3.3=270, 4.4=270, 5.5=270, 6.6=270}
+Using polytree-based weight calculation.
+Number of gene trees: 270
+0 trees have missing taxa
+Calculating distance matrix (for completion of X) ....with 2 distance matrices in parallel
+Species tree distances calculated ...
+
+Building set of clusters (X) from gene trees 
+------------------------------
+Number of Clusters after addition by distance: 63
+Adding to X using resolutions of greedy consensus ...
+
+Computing greedy consensus  took 0 seconds
+Limit for sigma of degrees:325
+
+polytomy size limit : > 3
+ []
+discarded polytomies: 
+Threshold 0.0:
+Threshold 0.01:
+Threshold 0.02:
+Threshold 0.05:
+Threshold 0.1:
+Threshold 0.2:
+Threshold 0.3333333333333333:
+Number of Clusters after addition by greedy: 63
+calculating extra bipartitions from extra input trees ...
+Number of Clusters after additions from extra trees: 63
+partitions formed in 0.484 secs
+Dynamic Programming starting after 0.484 secs
+Polytree max score: 4950
+Polytree building time: 0.045 seconds.
+Number of quartet trees in the gene trees: 4950
+Computing hash values took 0 seconds
+Size of largest cluster: 11
+Total Number of elements: 36
+Final optimization score: 0
+Size of largest cluster: 11
+37 36 36
+Total Number of elements: 36
+Normalized score (portion of input quartet trees satisfied before correcting for multiple individuals): 0.9276767676767677
+Final optimization score: 4592
+Optimal tree inferred in 1.619 secs.
+Weight calculation cumulatively took 5.1679E-4 secs
+(8.8,(7.7,(9.9,((10.10,(11.11,(4.4,(3.3,(2.2,1.1))))),(5.5,6.6)))));
+Final quartet score is: 4592
+Final normalized quartet score is: 0.9276767676767677
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{3.3, 2.2, 1.1}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{3.3, 2.2, 4.4, 1.1}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{3.3, 2.2, 4.4, 1.1, 11.11}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{2.2, 1.1}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{10.10, 3.3, 2.2, 4.4, 1.1, 11.11}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{5.5, 6.6}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{5.5, 6.6, 10.10, 3.3, 2.2, 4.4, 1.1, 11.11}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{9.9, 5.5, 6.6, 10.10, 3.3, 2.2, 4.4, 1.1, 11.11}
+(8.8,(7.7,(9.9,((10.10,(11.11,(4.4,(3.3,(2.2,1.1)0.98:0.5753641449035618)1:0.9808292530117262)1:2.367123614131617)1:2.367123614131617)1:1.519825753744413,(5.5,6.6)1:2.367123614131617)0.68:0.16989903679539747)1:1.6739764335716716));
+ASTRAL-Pro finished in 2.064 secs
+Memory Peak: 1182

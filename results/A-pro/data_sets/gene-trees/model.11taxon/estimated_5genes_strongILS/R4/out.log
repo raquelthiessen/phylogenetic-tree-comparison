@@ -1,0 +1,84 @@
+
+================== ASTRAL-Pro ===================== 
+
+This is ASTRAL-Pro (A-Pro) version 1.1.6
+Using native AVX batch computing.
+Gene trees are treated as unrooted
+There are 2 threads used to run.
+ti: 3
+tx: 3
+pw: 4
+The number of input tree read is 5
+90 trees read from /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/data_sets/gene-trees/model.11taxon/estimated_5genes_strongILS/R4/all_gt.tre
+5 extra trees.
+All output trees will be *arbitrarily* rooted at 5
+
+======== Running the main analysis
+Number of taxa: 11 (11 species)
+Taxa: [5, 11, 10, 7, 8, 6, 9, 1, 4, 2, 3]
+Taxon occupancy: {11=90, 1=90, 2=90, 3=90, 4=90, 5=90, 6=90, 7=90, 8=90, 9=90, 10=90}
+Using polytree-based weight calculation.
+Number of gene trees: 90
+0 trees have missing taxa
+Calculating distance matrix (for completion of X) ....with 2 distance matrices in parallel
+Species tree distances calculated ...
+
+Building set of clusters (X) from gene trees 
+------------------------------
+Number of Clusters after addition by distance: 69
+Adding to X using resolutions of greedy consensus ...
+
+Computing greedy consensus  took 0 seconds
+Limit for sigma of degrees:325
+
+polytomy size limit : > 3
+ []
+discarded polytomies: 
+Threshold 0.0:
+Threshold 0.01:
+Threshold 0.02:
+Threshold 0.05:
+Threshold 0.1:
+Threshold 0.2:
+Threshold 0.3333333333333333:
+Number of Clusters after addition by greedy: 69
+calculating extra bipartitions from extra input trees ...
+Number of Clusters after additions from extra trees: 69
+partitions formed in 0.353 secs
+Dynamic Programming starting after 0.353 secs
+Polytree max score: 1650
+Polytree building time: 0.043 seconds.
+Number of quartet trees in the gene trees: 1650
+Computing hash values took 0 seconds
+Size of largest cluster: 11
+Total Number of elements: 36
+Final optimization score: 0
+Size of largest cluster: 11
+37 0 0
+Total Number of elements: 36
+Normalized score (portion of input quartet trees satisfied before correcting for multiple individuals): 0.8115151515151515
+Final optimization score: 1339
+Optimal tree inferred in 1.494 secs.
+Weight calculation cumulatively took 5.3903E-4 secs
+(5,(6,((9,(10,(11,(1,(4,(2,3)))))),(7,8))));
+Final quartet score is: 1339
+Final normalized quartet score is: 0.8115151515151515
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 5:
+	{2, 3}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 5:
+	{4, 2, 3}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 5:
+	{1, 4, 2, 3}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 5:
+	{11, 1, 4, 2, 3}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 5:
+	{11, 10, 1, 4, 2, 3}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 5:
+	{11, 10, 9, 1, 4, 2, 3}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 5:
+	{7, 8}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 5:
+	{11, 10, 7, 8, 9, 1, 4, 2, 3}
+(5,(6,((9,(10,(11,(1,(4,(2,3)0.72:0.2876820724517809)0.4:0.0)0.97:0.8754687373538999)0.98:1.0498221244986774)0.72:0.2876820724517809)0.65:0.23361485118150535,(7,8)0.82:0.4144337780909248)0.67:0.2876820724517809));
+ASTRAL-Pro finished in 1.75 secs
+Memory Peak: 1176

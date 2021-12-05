@@ -1,0 +1,70 @@
+
+================== ASTRAL-Pro ===================== 
+
+This is ASTRAL-Pro (A-Pro) version 1.1.6
+Using native AVX batch computing.
+Gene trees are treated as unrooted
+There are 2 threads used to run.
+ti: 3
+tx: 3
+pw: 4
+The number of input tree read is 1000
+16000 trees read from /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/data_sets/gene-trees/model.15taxon/1000gene-true/R1/all_gt.tre
+1000 extra trees.
+All output trees will be *arbitrarily* rooted at J
+
+======== Running the main analysis
+Number of taxa: 15 (15 species)
+Taxa: [J, L, H, I, F, A, C, D, B, E, G, K, M, N, O]
+Taxon occupancy: {A=16000, B=16000, C=16000, D=16000, E=16000, F=16000, G=16000, H=16000, I=16000, J=16000, K=16000, L=16000, M=16000, N=16000, O=16000}
+Using polytree-based weight calculation.
+Number of gene trees: 16000
+0 trees have missing taxa
+Calculating distance matrix (for completion of X) ....with 2 distance matrices in parallel
+Species tree distances calculated ...
+
+Building set of clusters (X) from gene trees 
+------------------------------
+Number of Clusters after addition by distance: 4009
+Adding to X using resolutions of greedy consensus ...
+
+Computing greedy consensus  took 1 seconds
+Limit for sigma of degrees:425
+
+polytomy size limit : > 13
+ [12, 13]
+discarded polytomies: 
+Threshold 0.0:
+Threshold 0.01:
+Threshold 0.02:
+Threshold 0.05:
+Threshold 0.1:
+Threshold 0.2:
+polytomy of size 12; rounds with additions with at least 5 support: 0; clusters: 4009
+Threshold 0.3333333333333333:
+polytomy of size 13; rounds with additions with at least 5 support: 0; clusters: 4009
+Number of Clusters after addition by greedy: 4009
+calculating extra bipartitions from extra input trees ...
+Number of Clusters after additions from extra trees: 4009
+partitions formed in 12.311 secs
+Dynamic Programming starting after 12.311 secs
+Polytree max score: 1365000
+Polytree building time: 0.748 seconds.
+Number of quartet trees in the gene trees: 1365000
+Computing hash values took 0 seconds
+Size of largest cluster: 15
+Total Number of elements: 38280
+Final optimization score: 0
+Size of largest cluster: 15
+38281 2560 2624
+Total Number of elements: 38280
+Normalized score (portion of input quartet trees satisfied before correcting for multiple individuals): 0.6210827838827839
+Final optimization score: 847778
+Optimal tree inferred in 15.696 secs.
+Weight calculation cumulatively took 1.389275796 secs
+(J,((I,(H,(G,(F,(E,(D,(C,(A,B)))))))),(K,(L,(M,(N,O))))));
+Final quartet score is: 847778
+Final normalized quartet score is: 0.6210827838827839
+(J,((I,(H,(G,(F,(E,(D,(C,(A,B)1:0.23909807259603644)1:0.15757356874132222)1:0.17392533548667596)1:0.23550948887262424)1:0.1835110751793247)1:0.2045155097056708)1:0.23180626779951463)1:0.2129249603856181,(K,(L,(M,(N,O)1:0.18522286441663458)1:0.23634791067662697)1:0.20636453029565074)1:0.18177225713718767));
+ASTRAL-Pro finished in 17.668 secs
+Memory Peak: 1098

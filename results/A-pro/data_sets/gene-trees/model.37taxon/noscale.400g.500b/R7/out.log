@@ -1,0 +1,73 @@
+
+================== ASTRAL-Pro ===================== 
+
+This is ASTRAL-Pro (A-Pro) version 1.1.6
+Using native AVX batch computing.
+Gene trees are treated as unrooted
+There are 2 threads used to run.
+ti: 3
+tx: 3
+pw: 4
+The number of input tree read is 400
+6448 trees read from /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/data_sets/gene-trees/model.37taxon/noscale.400g.500b/R7/all_gt.tre
+400 extra trees.
+All output trees will be *arbitrarily* rooted at MAC
+
+======== Running the main analysis
+Number of taxa: 37 (37 species)
+Taxa: [MAC, MON, CHO, DAS, CAN, FEL, PTE, MYO, VIC, SUS, TUR, BOS, EQU, SOR, ERI, OCH, ORY, TUP, CAL, TAR, MIC, OTO, NEW, GOR, PON, PAN, HOM, DIP, MUS, RAT, CAV, SPE, PRO, LOX, ECH, ORN, GAL]
+Taxon occupancy: {PTE=6448, NEW=6448, TAR=6448, RAT=6448, SPE=6448, ORN=6448, CHO=6448, OTO=6448, PRO=6448, ORY=6448, MYO=6448, MIC=6448, BOS=6448, HOM=6448, EQU=6448, DIP=6448, MUS=6448, GOR=6448, ECH=6448, FEL=6448, MON=6448, MAC=6448, TUP=6448, PON=6448, CAL=6448, SUS=6448, TUR=6448, CAN=6448, VIC=6448, GAL=6448, LOX=6448, OCH=6448, DAS=6448, SOR=6448, CAV=6448, PAN=6448, ERI=6448}
+Using polytree-based weight calculation.
+Number of gene trees: 6448
+0 trees have missing taxa
+Calculating distance matrix (for completion of X) ....with 2 distance matrices in parallel
+Species tree distances calculated ...
+
+Building set of clusters (X) from gene trees 
+------------------------------
+Number of Clusters after addition by distance: 2577
+Adding to X using resolutions of greedy consensus ...
+
+Computing greedy consensus  took 2 seconds
+Limit for sigma of degrees:975
+
+polytomy size limit : > 5
+ [3, 3, 3, 4, 5]
+discarded polytomies: 
+Threshold 0.0:
+Threshold 0.01:
+Threshold 0.02:
+Threshold 0.05:
+Threshold 0.1:
+Threshold 0.2:
+polytomy of size 4; rounds with additions with at least 5 support: 0; clusters: 2577
+Threshold 0.3333333333333333:
+polytomy of size 5; rounds with additions with at least 5 support: 0; clusters: 2577
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 2577
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 2577
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 2577
+Number of Clusters after addition by greedy: 2577
+calculating extra bipartitions from extra input trees ...
+Number of Clusters after additions from extra trees: 2577
+partitions formed in 16.337 secs
+Dynamic Programming starting after 16.337 secs
+Polytree max score: 26418000
+Polytree building time: 1.177 seconds.
+Number of quartet trees in the gene trees: 26418000
+Computing hash values took 0 seconds
+Size of largest cluster: 37
+Total Number of elements: 7959
+Final optimization score: 0
+Size of largest cluster: 37
+7960 660 661
+Total Number of elements: 7959
+Normalized score (portion of input quartet trees satisfied before correcting for multiple individuals): 0.8542110682110682
+Final optimization score: 22566548
+Optimal tree inferred in 19.284 secs.
+Weight calculation cumulatively took 0.277764018 secs
+(MAC,(MON,((ORN,GAL),(((((TAR,(CAL,(NEW,(PON,(GOR,(PAN,HOM)))))),(MIC,OTO)),(TUP,((SPE,(CAV,(DIP,(MUS,RAT)))),(OCH,ORY)))),((((VIC,(SUS,(TUR,BOS))),(EQU,(CAN,FEL))),(PTE,MYO)),(SOR,ERI))),((CHO,DAS),(ECH,(PRO,LOX)))))));
+Final quartet score is: 22566548
+Final normalized quartet score is: 0.8542110682110682
+(MAC,(MON,((ORN,GAL)0.89:0.08254905761393111,(((((TAR,(CAL,(NEW,(PON,(GOR,(PAN,HOM)1:0.5318759118603258)1:1.4858529541616092)1:1.9190758014491434)1:0.24704994391567442)1:0.7433647969699441)1:0.22610091698424517,(MIC,OTO)1:1.625450464112854)1:1.1575732334867337,(TUP,((SPE,(CAV,(DIP,(MUS,RAT)1:2.260502341559544)1:0.3131684708750669)0.46:0.014442951216987753)1:0.7119957743128292,(OCH,ORY)1:2.3113515862062277)1:0.5698016353844938)0.96:0.08459179140839938)1:1.3222325871505998,((((VIC,(SUS,(TUR,BOS)1:0.5980637324196685)1:0.31301344413264337)1:2.1123976293631324,(EQU,(CAN,FEL)1:2.0107127508270386)0.66:0.03511692576788507)1:0.14005422323966274,(PTE,MYO)1:0.8285925329351878)1:0.36436089203663957,(SOR,ERI)1:0.39865447635554735)1:1.4977651522817987)1:0.927848423892569,((CHO,DAS)1:3.485887718237036,(ECH,(PRO,LOX)1:1.3663968199148693)1:1.6393581811813303)0.81:0.052469383680755204)1:0.9088151810394569)1:1.6743543482430372));
+ASTRAL-Pro finished in 22.344 secs
+Memory Peak: 1122
