@@ -1,12 +1,19 @@
 #! /usr/bin/env Rscript
 
 # Reading in the required packages and functions for plotting data -------------------------
-libs <- c("magrittr", "dplyr", "data.table", "tibble", "ggplot2", "tidyr")
+libs <- c("magrittr", "dplyr", "data.table", "tibble", "ggplot2", "tidyr", 
+          "RColorBrewer")
 y <- lapply(libs, require, character.only = TRUE); rm(y); rm(libs)
 dir.create("figs", showWarnings = FALSE)
 
 # Run source("processing.R") first if "metrics.txt" is not found
-metrics <- read.table("results/metrics.txt", header = TRUE) %>% as.data.table()
+if (file.exists("results/metrics.txt")) {
+  metrics <- read.table("results/metrics.txt", header = TRUE) %>% as.data.table()
+}else {
+  source("src/processing.R")
+  metrics <- read.table("results/metrics.txt", header = TRUE) %>% as.data.table()  
+}
+
 
 # Plot 1
 taxon11 <- metrics[taxa == 11 & !is.na(gt_type)] %>% mutate(num_genes = paste0(num_genes, " genes"))
@@ -102,3 +109,8 @@ ggplot(metrics, aes(x = method, y = NRF, color = method, fill = method)) +
 ggsave("figs/plot8.png",width = 7.3,height = 7)
 
 
+if (file.exists("figs/plot1.png")) {
+  cat("\nFigures generated, saved to figs/.\n")
+}else {
+  cat("Something went wrong. Open up src/plotting.R and check the steps.\n")
+}

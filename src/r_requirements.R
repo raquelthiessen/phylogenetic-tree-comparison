@@ -4,7 +4,7 @@
 
 required_packages <- c("magrittr", "dplyr", "data.table", "tibble", 
                        "tidytree", "tidyr", "phangorn", "ggplot2", 
-                       "beepr", "here")
+                       "RColorBrewer")
 y <- suppressWarnings(
   suppressMessages(
     lapply(required_packages, require, character.only = TRUE)

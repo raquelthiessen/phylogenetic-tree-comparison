@@ -6,7 +6,6 @@ y <- lapply(libs, require, character.only = TRUE); rm(y); rm(libs)
 
 source("src/functions_for_proc.R")
 
-
 # Folders to read from and general parameters ------------------------------------------------
 method_names <- c("A-pro", "ASTRAL-MP", "wQFM") %>% set_names(c("apro", "amp", "wqfm"))
 filenames <- c("model.11taxon", "model.15taxon", "model.37taxon", "model.10.2000000.0.000001")
@@ -79,4 +78,8 @@ metrics <- left_join(metrics, sptr_acc, by = c("method", "filename")) %>%
 
 write.table(metrics, "results/metrics.txt", sep = "\t", row.names = FALSE)
 
-
+if (file.exists("results/metrics.txt")) {
+  cat("\nMetrics file generated, saved to results/.\n")
+}else {
+  cat("Something went wrong. Open up src/processing.R and check the steps.\n")
+}
