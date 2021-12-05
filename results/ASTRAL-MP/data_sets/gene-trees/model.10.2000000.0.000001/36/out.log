@@ -1,0 +1,70 @@
+
+
+================== ASTRAL ===================== 
+
+This is ASTRAL version 5.15.4
+Using native AVX batch computing.
+Gene trees are treated as unrooted
+Warning:
+
+ Problem using GPU. Proceeding without GPU
+org.jocl.CLException: CL_PLATFORM_NOT_FOUND_KHR
+org.jocl.CLException: CL_PLATFORM_NOT_FOUND_KHR
+Starting 2 threads ...
+There are 2 threads used to run.
+1000 trees read from /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/data_sets/gene-trees/model.10.2000000.0.000001/36/truegenetrees
+All output trees will be *arbitrarily* rooted at 0
+
+======== Running the main analysis
+Number of taxa: 11 (11 species)
+Taxa: [0, 7, 2, 4, 9, 5, 10, 3, 1, 6, 8]
+Taxon occupancy: {0=1000, 1=1000, 2=1000, 3=1000, 4=1000, 5=1000, 6=1000, 7=1000, 8=1000, 9=1000, 10=1000}
+Using polytree-based weight calculation.
+Number of gene trees: 1000
+0 trees have missing taxa
+Calculating distance matrix (for completion of X) ....with 2 distance matrices for parallellism
+Species tree distances calculated ...
+
+Building set of clusters (X) from gene trees 
+------------------------------
+Number of Clusters after addition from gene trees: 87
+Number of Clusters after addition by distance: 87
+Adding to X using resolutions of greedy consensus ...
+
+Computing greedy consensus  
+took 0 seconds
+Limit for sigma of degrees:325
+
+polytomy size limit : > 3
+ []
+discarded polytomies: 
+Threshold 0.0:
+Threshold 0.01:
+Threshold 0.02:
+Threshold 0.05:
+Threshold 0.1:
+Threshold 0.2:
+Threshold 0.3333333333333333:
+Number of Clusters after addition by greedy: 87
+partitions formed in 1.131 secs
+Dynamic Programming starting after 1.131 secs
+Polytree max score: 330000
+Polytree building time: 0.084 seconds.
+Using native AVX batch computing method.
+Number of quartet trees in the gene trees: 330000
+Computing hash values took 0 seconds
+Size of largest cluster: 11
+Size of largest cluster: 11
+Finishing up:72 71 71
+Total Number of elements: 71
+Normalized score (portion of input quartet trees satisfied before correcting for multiple individuals): 0.9703787878787878
+Final optimization score: 320225
+Optimal tree inferred in 2.343 secs.
+Weight calculation using polytrees cumulatively took 6.81389E-4 secs
+(0,((((2,4),(7,9)),((10,3),(5,1))),(6,8)));
+Final quartet score is: 320225
+Final normalized quartet score is: 0.9703787878787878
+(0,((((2,4)1:2.1924905458215425,(7,9)1:1.9183221925364842)1:5.810142490647089,((10,3)1:1.771486834285599,(5,1)1:2.8657035114806693)1:4.711530201978998)1:1.4566439395877673,(6,8)1:6.5032896712070904));
+ASTRAL finished in 3.271 secs
+Shutting down threading
+Memory Peak: 1078

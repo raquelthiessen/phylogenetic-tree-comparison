@@ -1,0 +1,75 @@
+
+
+================== ASTRAL ===================== 
+
+This is ASTRAL version 5.15.4
+Using native AVX batch computing.
+Gene trees are treated as unrooted
+Warning:
+
+ Problem using GPU. Proceeding without GPU
+org.jocl.CLException: CL_PLATFORM_NOT_FOUND_KHR
+org.jocl.CLException: CL_PLATFORM_NOT_FOUND_KHR
+Starting 2 threads ...
+There are 2 threads used to run.
+100 trees read from /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/data_sets/gene-trees/model.15taxon/100gene-100bp/R8/all_gt.tre
+All output trees will be *arbitrarily* rooted at C
+
+======== Running the main analysis
+Number of taxa: 15 (15 species)
+Taxa: [C, A, D, M, L, N, K, J, H, F, E, B, I, O, G]
+Taxon occupancy: {A=100, B=100, C=100, D=100, E=100, F=100, G=100, H=100, I=100, J=100, K=100, L=100, M=100, N=100, O=100}
+Using polytree-based weight calculation.
+Number of gene trees: 100
+0 trees have missing taxa
+Calculating distance matrix (for completion of X) ....with 2 distance matrices for parallellism
+Species tree distances calculated ...
+
+Building set of clusters (X) from gene trees 
+------------------------------
+Number of Clusters after addition from gene trees: 1279
+Number of Clusters after addition by distance: 1279
+Adding to X using resolutions of greedy consensus ...
+
+Computing greedy consensus  
+took 0 seconds
+Limit for sigma of degrees:425
+
+polytomy size limit : > 14
+ [3, 5, 8, 13, 14]
+discarded polytomies: 
+Threshold 0.0:
+Threshold 0.01:
+Threshold 0.02:
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 1281
+Threshold 0.05:
+polytomy of size 5; rounds with additions with at least 5 support: 2; clusters: 1289
+Threshold 0.1:
+polytomy of size 8; rounds with additions with at least 5 support: 2; clusters: 1301
+Threshold 0.2:
+polytomy of size 13; rounds with additions with at least 5 support: 0; clusters: 1301
+Threshold 0.3333333333333333:
+polytomy of size 14; rounds with additions with at least 5 support: 0; clusters: 1301
+Number of Clusters after addition by greedy: 1301
+partitions formed in 2.714 secs
+Dynamic Programming starting after 2.714 secs
+Polytree max score: 136500
+Polytree building time: 0.038 seconds.
+Using native AVX batch computing method.
+Number of quartet trees in the gene trees: 136500
+Computing hash values took 0 seconds
+Size of largest cluster: 15
+Size of largest cluster: 15
+Finishing up:4037 448 448
+Total Number of elements: 4036
+Normalized score (portion of input quartet trees satisfied before correcting for multiple individuals): 0.5103296703296704
+Final optimization score: 69660
+Optimal tree inferred in 3.908 secs.
+Weight calculation using polytrees cumulatively took 0.052744598 secs
+(C,((A,B),(D,(E,(F,(G,(O,(H,(I,(J,(K,(N,(M,L)))))))))))));
+Final quartet score is: 69660
+Final normalized quartet score is: 0.5103296703296704
+(C,((A,B)1:0.2440916363769193,(D,(E,(F,(G,(O,(H,(I,(J,(K,(N,(M,L)0.85:0.1264841471091196)0.49:0.03666771919188125)0.81:0.10042223401724394)0.67:0.08656143322500845)0.79:0.10536051565782652)0.56:0.06237208125664976)0.87:0.12488029752714502)0.62:0.05782841109763218)0.53:0.05250994527196414)0.97:0.17600491518325065)0.82:0.10701204369629952));
+ASTRAL finished in 4.531 secs
+Shutting down threading
+Memory Peak: 1104

@@ -1,0 +1,62 @@
+mode = Command line [1.0*ws - 1.0*wv]
+Using no annotations for branches
+Python Engine: python3
+Input file consists of gene trees ... generating weighted quartets to file: input-wqrts-for-jar.wqrts
+inputFile = /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/data_sets/gene-trees/model.37taxon/noscale.25g.500b/R1/all_gt.tre, outputFile = input-wqrts-for-jar.wqrts
+--- Time to run => 19.438248872756958 seconds ---
+Generating weighted quartets completed.
+Quartet Score level: 2
+================= **** ========== Running wQFM v1.3 ============== **** ====================
+Reading from file <input-wqrts-for-jar.wqrts> done.
+Initial-Num-Quartets = 139825
+Running with partition score mode = Command line [1.0*ws - 1.0*wv]
+37
+{PTE=7, NEW=22, RAT=30, TAR=32, SPE=31, ORN=24, CHO=10, OTO=26, PRO=29, ORY=25, MYO=6, MIC=19, BOS=0, HOM=16, EQU=3, DIP=12, MUS=21, ECH=13, GOR=15, FEL=5, MON=20, MAC=18, PON=28, TUP=33, CAL=1, SUS=35, TUR=36, CAN=2, VIC=34, GAL=14, LOX=17, OCH=23, SOR=8, DAS=11, CAV=9, PAN=27, ERI=4}
+{0=BOS, 1=CAL, 2=CAN, 3=EQU, 4=ERI, 5=FEL, 6=MYO, 7=PTE, 8=SOR, 9=CAV, 10=CHO, 11=DAS, 12=DIP, 13=ECH, 14=GAL, 15=GOR, 16=HOM, 17=LOX, 18=MAC, 19=MIC, 20=MON, 21=MUS, 22=NEW, 23=OCH, 24=ORN, 25=ORY, 26=OTO, 27=PAN, 28=PON, 29=PRO, 30=RAT, 31=SPE, 32=TAR, 33=TUP, 34=VIC, 35=SUS, 36=TUR}
+Total Num-Taxa = 37
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 1, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 2, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 3, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 4, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 5, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 4, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 5, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 5, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 6, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 7, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 7, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 3, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 4, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 5, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 4, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 5, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 5, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 6, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 7, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 2, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 3, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 4, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 5, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 6, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 4, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 5, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 6, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 3, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 4, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 5, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 4, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 5, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 6, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 6, ALPHA: 1.0, BETA: 1.0
+
+
+[L 49.] FMRunner: final tree return
+((((ECH,(LOX,PRO)),((CHO,DAS),(GAL,(ORN,(MAC,MON))))),((SOR,ERI),((MYO,PTE),((EQU,(CAN,FEL)),(VIC,(SUS,(BOS,TUR))))))),((TUP,((OCH,ORY),(CAV,(SPE,(DIP,(MUS,RAT)))))),((MIC,OTO),(TAR,(CAL,(NEW,(PON,(GOR,(HOM,PAN)))))))));
+>-> Successfully written to output-file /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/results/wQFM/data_sets/gene-trees/model.37taxon/noscale.25g.500b/R1/speciestree.txt
+
+Time taken = 7637 ms ==> 0 minutes and 7 seconds.
+================= **** ======================== **** ====================
+No annotations used.
+python3 compute_quartet_score.py input-wqrts-for-jar.wqrts /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/results/wQFM/data_sets/gene-trees/model.37taxon/noscale.25g.500b/R1/speciestree.txt 2
+1423680.0	1651125.0	0.8622484669543493
+Memory Peak: 1070

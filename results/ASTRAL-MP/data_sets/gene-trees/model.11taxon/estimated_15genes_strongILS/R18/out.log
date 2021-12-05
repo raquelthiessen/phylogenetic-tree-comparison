@@ -1,0 +1,88 @@
+
+
+================== ASTRAL ===================== 
+
+This is ASTRAL version 5.15.4
+Using native AVX batch computing.
+Gene trees are treated as unrooted
+Warning:
+
+ Problem using GPU. Proceeding without GPU
+org.jocl.CLException: CL_PLATFORM_NOT_FOUND_KHR
+org.jocl.CLException: CL_PLATFORM_NOT_FOUND_KHR
+Starting 2 threads ...
+There are 2 threads used to run.
+15 trees read from /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/data_sets/gene-trees/model.11taxon/estimated_15genes_strongILS/R18/all_gt.tre
+All output trees will be *arbitrarily* rooted at 2
+
+======== Running the main analysis
+Number of taxa: 11 (11 species)
+Taxa: [2, 11, 10, 5, 6, 9, 7, 8, 3, 4, 1]
+Taxon occupancy: {11=15, 1=15, 2=15, 3=15, 4=15, 5=15, 6=15, 7=15, 8=15, 9=15, 10=15}
+Using polytree-based weight calculation.
+Number of gene trees: 15
+0 trees have missing taxa
+Calculating distance matrix (for completion of X) ....with 2 distance matrices for parallellism
+Species tree distances calculated ...
+
+Building set of clusters (X) from gene trees 
+------------------------------
+Number of Clusters after addition from gene trees: 107
+Number of Clusters after addition by distance: 107
+Adding to X using resolutions of greedy consensus ...
+
+Computing greedy consensus  
+took 0 seconds
+Limit for sigma of degrees:325
+
+polytomy size limit : > 3
+ [3, 3]
+discarded polytomies: 
+Threshold 0.0:
+Threshold 0.01:
+Threshold 0.02:
+Threshold 0.05:
+Threshold 0.1:
+Threshold 0.2:
+Threshold 0.3333333333333333:
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 107
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 107
+Number of Clusters after addition by greedy: 107
+partitions formed in 0.251 secs
+Dynamic Programming starting after 0.251 secs
+Polytree max score: 4950
+Polytree building time: 0.008 seconds.
+Using native AVX batch computing method.
+Number of quartet trees in the gene trees: 4950
+Computing hash values took 0 seconds
+Size of largest cluster: 11
+Size of largest cluster: 11
+Total Number of elements: 112
+Finishing up:113 112 112
+Normalized score (portion of input quartet trees satisfied before correcting for multiple individuals): 0.7975757575757576
+Final optimization score: 3948
+Optimal tree inferred in 1.34 secs.
+Weight calculation using polytrees cumulatively took 0.002255324 secs
+(2,((4,(11,(10,((9,(7,8)),(5,6))))),(3,1)));
+Final quartet score is: 3948
+Final normalized quartet score is: 0.7975757575757576
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{7, 8}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{9, 7, 8}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{5, 6}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{5, 6, 9, 7, 8}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{10, 5, 6, 9, 7, 8}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{11, 10, 5, 6, 9, 7, 8}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{11, 10, 5, 6, 9, 7, 8, 4}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 15:
+	{3, 1}
+(2,((4,(11,(10,((9,(7,8)1:1.1884686177899708)0.45:0.05623971832287619,(5,6)0.82:0.26706278524904525)0.61:0.13353139262452263)1:2.367123614131617)1:1.6739764335716716)0.92:0.37145195551723964,(3,1)0.52:0.07711730334443129));
+ASTRAL finished in 1.626 secs
+Shutting down threading
+Memory Peak: 1194

@@ -1,0 +1,36 @@
+mode = Command line [1.0*ws - 1.0*wv]
+Using no annotations for branches
+Python Engine: python3
+Input file consists of gene trees ... generating weighted quartets to file: input-wqrts-for-jar.wqrts
+inputFile = /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/data_sets/gene-trees/model.10.2000000.0.000001/31/truegenetrees, outputFile = input-wqrts-for-jar.wqrts
+--- Time to run => 16.35149908065796 seconds ---
+Generating weighted quartets completed.
+Quartet Score level: 2
+================= **** ========== Running wQFM v1.3 ============== **** ====================
+Reading from file <input-wqrts-for-jar.wqrts> done.
+Initial-Num-Quartets = 662
+Running with partition score mode = Command line [1.0*ws - 1.0*wv]
+11
+{0=0, 1=1, 2=6, 3=3, 4=7, 5=4, 6=8, 7=9, 8=5, 9=10, 10=2}
+{0=0, 1=1, 2=10, 3=3, 4=5, 5=8, 6=2, 7=4, 8=6, 9=7, 10=9}
+Total Num-Taxa = 11
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 1, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 2, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 3, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 3, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 4, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 2, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 3, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 3, ALPHA: 1.0, BETA: 1.0
+
+
+[L 49.] FMRunner: final tree return
+(((1,9),((2,4),(6,7))),(0,(3,(10,(5,8)))));
+>-> Successfully written to output-file /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/results/wQFM/data_sets/gene-trees/model.10.2000000.0.000001/31/speciestree.txt
+
+Time taken = 694 ms ==> 0 minutes and 0 seconds.
+================= **** ======================== **** ====================
+No annotations used.
+python3 compute_quartet_score.py input-wqrts-for-jar.wqrts /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/results/wQFM/data_sets/gene-trees/model.10.2000000.0.000001/31/speciestree.txt 2
+304417.0	330000.0	0.9224757575757576
+Memory Peak: 1026

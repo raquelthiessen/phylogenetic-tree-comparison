@@ -1,0 +1,69 @@
+
+================== ASTRAL-Pro ===================== 
+
+This is ASTRAL-Pro (A-Pro) version 1.1.6
+Using native AVX batch computing.
+Gene trees are treated as unrooted
+There are 2 threads used to run.
+ti: 3
+tx: 3
+pw: 4
+The number of input tree read is 25
+450 trees read from /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/data_sets/gene-trees/model.11taxon/estimated_25genes_strongILS/R20/all_gt.tre
+25 extra trees.
+All output trees will be *arbitrarily* rooted at 7
+
+======== Running the main analysis
+Number of taxa: 11 (11 species)
+Taxa: [7, 8, 9, 5, 6, 10, 11, 4, 2, 1, 3]
+Taxon occupancy: {11=450, 1=450, 2=450, 3=450, 4=450, 5=450, 6=450, 7=450, 8=450, 9=450, 10=450}
+Using polytree-based weight calculation.
+Number of gene trees: 450
+0 trees have missing taxa
+Calculating distance matrix (for completion of X) ....with 2 distance matrices in parallel
+Species tree distances calculated ...
+
+Building set of clusters (X) from gene trees 
+------------------------------
+Number of Clusters after addition by distance: 113
+Adding to X using resolutions of greedy consensus ...
+
+Computing greedy consensus  took 0 seconds
+Limit for sigma of degrees:325
+
+polytomy size limit : > 3
+ [3]
+discarded polytomies: 
+Threshold 0.0:
+Threshold 0.01:
+Threshold 0.02:
+Threshold 0.05:
+Threshold 0.1:
+Threshold 0.2:
+Threshold 0.3333333333333333:
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 113
+Number of Clusters after addition by greedy: 113
+calculating extra bipartitions from extra input trees ...
+Number of Clusters after additions from extra trees: 113
+partitions formed in 0.763 secs
+Dynamic Programming starting after 0.763 secs
+Polytree max score: 8250
+Polytree building time: 0.067 seconds.
+Number of quartet trees in the gene trees: 8250
+Computing hash values took 0 seconds
+Size of largest cluster: 11
+Total Number of elements: 121
+Final optimization score: 0
+Size of largest cluster: 11
+122 64 121
+Total Number of elements: 121
+Normalized score (portion of input quartet trees satisfied before correcting for multiple individuals): 0.8191515151515152
+Final optimization score: 6758
+Optimal tree inferred in 1.957 secs.
+Weight calculation cumulatively took 0.001550051 secs
+(7,(8,((9,(10,(11,(4,(1,(2,3)))))),(5,6))));
+Final quartet score is: 6758
+Final normalized quartet score is: 0.8191515151515152
+(7,(8,((9,(10,(11,(4,(1,(2,3)0.61:0.11179140598811681)0.96:0.36179004460550285)1:1.466337068793427)1:2.159484249353373)0.95:0.33091080700260117)0.71:0.1473628717729845,(5,6)1:1.0373414632750688)1:1.1609554192422455));
+ASTRAL-Pro finished in 2.48 secs
+Memory Peak: 1188

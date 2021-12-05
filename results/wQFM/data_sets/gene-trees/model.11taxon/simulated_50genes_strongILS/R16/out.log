@@ -1,0 +1,36 @@
+mode = Command line [1.0*ws - 1.0*wv]
+Using no annotations for branches
+Python Engine: python3
+Input file consists of gene trees ... generating weighted quartets to file: input-wqrts-for-jar.wqrts
+inputFile = /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/data_sets/gene-trees/model.11taxon/simulated_50genes_strongILS/R16/all_gt.tre, outputFile = input-wqrts-for-jar.wqrts
+--- Time to run => 0.7336616516113281 seconds ---
+Generating weighted quartets completed.
+Quartet Score level: 2
+================= **** ========== Running wQFM v1.3 ============== **** ====================
+Reading from file <input-wqrts-for-jar.wqrts> done.
+Initial-Num-Quartets = 516
+Running with partition score mode = Command line [1.0*ws - 1.0*wv]
+11
+{7.7=7, 8.8=8, 1.1=0, 9.9=9, 2.2=2, 10.10=1, 11.11=10, 3.3=3, 4.4=4, 5.5=5, 6.6=6}
+{0=1.1, 1=10.10, 2=2.2, 3=3.3, 4=4.4, 5=5.5, 6=6.6, 7=7.7, 8=8.8, 9=9.9, 10=11.11}
+Total Num-Taxa = 11
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 1, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 2, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 3, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 3, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 2, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 3, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 4, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 3, ALPHA: 1.0, BETA: 1.0
+
+
+[L 49.] FMRunner: final tree return
+((11.11,(4.4,(3.3,(1.1,2.2)))),(10.10,(9.9,((5.5,6.6),(8.8,7.7)))));
+>-> Successfully written to output-file /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/results/wQFM/data_sets/gene-trees/model.11taxon/simulated_50genes_strongILS/R16/speciestree.txt
+
+Time taken = 350 ms ==> 0 minutes and 0 seconds.
+================= **** ======================== **** ====================
+No annotations used.
+python3 compute_quartet_score.py input-wqrts-for-jar.wqrts /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/results/wQFM/data_sets/gene-trees/model.11taxon/simulated_50genes_strongILS/R16/speciestree.txt 2
+15594.0	16500.0	0.9450909090909091
+Memory Peak: 1142

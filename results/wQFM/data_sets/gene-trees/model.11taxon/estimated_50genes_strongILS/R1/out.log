@@ -1,0 +1,36 @@
+mode = Command line [1.0*ws - 1.0*wv]
+Using no annotations for branches
+Python Engine: python3
+Input file consists of gene trees ... generating weighted quartets to file: input-wqrts-for-jar.wqrts
+inputFile = /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/data_sets/gene-trees/model.11taxon/estimated_50genes_strongILS/R1/all_gt.tre, outputFile = input-wqrts-for-jar.wqrts
+--- Time to run => 0.6596014499664307 seconds ---
+Generating weighted quartets completed.
+Quartet Score level: 2
+================= **** ========== Running wQFM v1.3 ============== **** ====================
+Reading from file <input-wqrts-for-jar.wqrts> done.
+Initial-Num-Quartets = 885
+Running with partition score mode = Command line [1.0*ws - 1.0*wv]
+11
+{11=2, 1=0, 2=6, 3=7, 4=8, 5=3, 6=4, 7=5, 8=9, 9=10, 10=1}
+{0=1, 1=10, 2=11, 3=5, 4=6, 5=7, 6=2, 7=3, 8=4, 9=8, 10=9}
+Total Num-Taxa = 11
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 1, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 2, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 3, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 4, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 2, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 3, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 4, ALPHA: 1.0, BETA: 1.0
+mode = Command line [1.0*ws - 1.0*wv] LEVEL: 5, ALPHA: 1.0, BETA: 1.0
+
+
+[L 49.] FMRunner: final tree return
+((11,(4,(3,(1,2)))),(10,((5,6),(9,(7,8)))));
+>-> Successfully written to output-file /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/results/wQFM/data_sets/gene-trees/model.11taxon/estimated_50genes_strongILS/R1/speciestree.txt
+
+Time taken = 484 ms ==> 0 minutes and 0 seconds.
+================= **** ======================== **** ====================
+No annotations used.
+python3 compute_quartet_score.py input-wqrts-for-jar.wqrts /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/results/wQFM/data_sets/gene-trees/model.11taxon/estimated_50genes_strongILS/R1/speciestree.txt 2
+13049.0	16500.0	0.7908484848484848
+Memory Peak: 1136

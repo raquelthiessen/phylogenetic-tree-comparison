@@ -1,0 +1,77 @@
+
+
+================== ASTRAL ===================== 
+
+This is ASTRAL version 5.15.4
+Using native AVX batch computing.
+Gene trees are treated as unrooted
+Warning:
+
+ Problem using GPU. Proceeding without GPU
+org.jocl.CLException: CL_PLATFORM_NOT_FOUND_KHR
+org.jocl.CLException: CL_PLATFORM_NOT_FOUND_KHR
+Starting 2 threads ...
+There are 2 threads used to run.
+200 trees read from /home/vasenaj/Desktop/phylogenetic-tree-comparison-rt-refactor/data_sets/gene-trees/model.37taxon/noscale.200g.500b/R6/all_gt.tre
+All output trees will be *arbitrarily* rooted at MON
+
+======== Running the main analysis
+Number of taxa: 37 (37 species)
+Taxa: [MON, ORN, GAL, LOX, PRO, ECH, DAS, CHO, TAR, NEW, CAL, PAN, PON, GOR, HOM, SUS, TUR, BOS, VIC, EQU, CAN, FEL, PTE, MYO, ERI, SOR, DIP, RAT, MUS, TUP, MIC, OTO, ORY, OCH, CAV, SPE, MAC]
+Taxon occupancy: {PTE=200, NEW=200, TAR=200, RAT=200, SPE=200, ORN=200, CHO=200, OTO=200, PRO=200, ORY=200, MYO=200, MIC=200, HOM=200, BOS=200, EQU=200, DIP=200, MUS=200, ECH=200, GOR=200, FEL=200, MON=200, PON=200, TUP=200, MAC=200, CAL=200, SUS=200, TUR=200, VIC=200, CAN=200, GAL=200, LOX=200, OCH=200, DAS=200, SOR=200, CAV=200, PAN=200, ERI=200}
+Using polytree-based weight calculation.
+Number of gene trees: 200
+0 trees have missing taxa
+Calculating distance matrix (for completion of X) ....with 2 distance matrices for parallellism
+Species tree distances calculated ...
+
+Building set of clusters (X) from gene trees 
+------------------------------
+Number of Clusters after addition from gene trees: 1789
+Number of Clusters after addition by distance: 1789
+Adding to X using resolutions of greedy consensus ...
+
+Computing greedy consensus  
+took 0 seconds
+Limit for sigma of degrees:975
+
+polytomy size limit : > 5
+ [3, 3, 3, 3, 3, 3, 5]
+discarded polytomies: 
+Threshold 0.0:
+Threshold 0.01:
+Threshold 0.02:
+Threshold 0.05:
+Threshold 0.1:
+Threshold 0.2:
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 1789
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 1789
+Threshold 0.3333333333333333:
+polytomy of size 5; rounds with additions with at least 5 support: 0; clusters: 1789
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 1789
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 1789
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 1789
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 1789
+Number of Clusters after addition by greedy: 1789
+partitions formed in 1.792 secs
+Dynamic Programming starting after 1.792 secs
+Polytree max score: 13209000
+Polytree building time: 0.053 seconds.
+Using native AVX batch computing method.
+Number of quartet trees in the gene trees: 13209000
+Computing hash values took 0 seconds
+Size of largest cluster: 37
+Size of largest cluster: 37
+Finishing up:4365 320 321
+Total Number of elements: 4364
+Normalized score (portion of input quartet trees satisfied before correcting for multiple individuals): 0.8563302293890529
+Final optimization score: 11311266
+Optimal tree inferred in 3.083 secs.
+Weight calculation using polytrees cumulatively took 0.075222284 secs
+(MON,(MAC,(ORN,(GAL,(((TUP,(((TAR,(CAL,(NEW,(PON,(GOR,(PAN,HOM)))))),(MIC,OTO)),((SPE,(CAV,(DIP,(RAT,MUS)))),(ORY,OCH)))),((((EQU,(VIC,(SUS,(TUR,BOS)))),(CAN,FEL)),(PTE,MYO)),(ERI,SOR))),((DAS,CHO),(ECH,(LOX,PRO))))))));
+Final quartet score is: 11311266
+Final normalized quartet score is: 0.8563302293890529
+(MON,(MAC,(ORN,(GAL,(((TUP,(((TAR,(CAL,(NEW,(PON,(GOR,(PAN,HOM)1:0.3760512229018711)1:1.1023506107787167)1:1.8678067488669299)1:0.18787377383324758)1:0.7586281024999473)1:0.26568578385014197,(MIC,OTO)1:1.4033441559006858)1:1.2252117061778187,((SPE,(CAV,(DIP,(RAT,MUS)1:2.412933150162912)1:0.2237373503730962)0.76:0.06379253080084998)1:0.6435873529322532,(ORY,OCH)1:2.1652053932181645)1:0.7175198174981074)0.47:0.032683021292804794)1:1.3665708127537624,((((EQU,(VIC,(SUS,(TUR,BOS)1:0.5659461423810436)1:0.30809094408298804)1:2.2002608987159955)0.56:0.0332262779229925,(CAN,FEL)1:2.455492764581707)0.95:0.11276168190471315,(PTE,MYO)1:0.8898574748059986)1:0.3067378899476686,(ERI,SOR)1:0.3877789592348944)1:1.4304825724120955)1:0.9257031557052398,((DAS,CHO)1:3.483302226517626,(ECH,(LOX,PRO)1:1.2074908378576152)1:1.8943253859548654)0.86:0.08421677805861394)1:0.6439509662377403)0.69:0.05222209808380067)1:1.7124599295108924));
+ASTRAL finished in 4.233 secs
+Shutting down threading
+Memory Peak: 1128
