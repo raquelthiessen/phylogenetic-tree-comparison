@@ -36,7 +36,6 @@ mod_folders <- data.table(
                  file.path("data_sets/species-trees", filenames[4]))
 )
 
-
 modelD_inp <- "data_sets/species-trees/model.10.2000000.0.000001"
 modelD_out <- "data_sets/gene-trees/model.10.2000000.0.000001"
 
@@ -58,8 +57,7 @@ wqfm_logs <- logs_base[method == "wQFM"] %>% select(-num_gt) %>%
 metrics <- logs_base[method != "wQFM"] %>% bind_rows(wqfm_logs) %>% 
   mutate(across(taxa, as.factor))
 
-
-# wQFM data, species tree accuracy -----------------------------------------------------------
+# Species tree accuracy results --------------------------------------------------------------
 models <- lapply(1:nrow(mod_folders), function(i) {
   if (mod_folders$mod[i] == "model10") {
     model_true <- list.files(mod_folders$true_trees[i], full.names = TRUE, recursive = TRUE) %>% 
@@ -79,24 +77,6 @@ models <- lapply(1:nrow(mod_folders), function(i) {
 
   bind_rows(f1, f2, f3)
 }) %>% bind_rows()
-
-
-# model_true <- read.tree(mod_folders$true_trees[i])
-# f <- mod_folders$mod_dirs[i]
-# spTreeAcc("A-pro", model_true, f) %>% 
-#   bind_rows(spTreeAcc("ASTRAL-MP", model_true, f)) %>% 
-#   bind_rows(spTreeAcc("wQFM", model_true, f))
-
-
-# ASTRAL data --------------------------------------------------------------------------------
-# modelD_files <- file.path(modelD_inp, list.files(modelD_inp, recursive = TRUE))
-# modelD_true <-  lapply(modelD_files, function(file_x) read.tree(file_x)) %>%
-#   set_names(modelD_files)
-# 
-# sptr_acc <- spTreeAcc("A-pro", modelD_true, modelD_out) %>%
-#   bind_rows(spTreeAcc("ASTRAL-MP", modelD_true, modelD_out)) %>%
-#   bind_rows(spTreeAcc("wQFM", modelD_true, modelD_out)) %>%
-#   bind_rows(models, .)
 
 
 # Combining all metrics ----------------------------------------------------------------------

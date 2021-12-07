@@ -101,6 +101,8 @@ allLogs <- function(method_names, filenames, split_by) {
   }) %>% bind_rows()
 }
 
+# collects species trees (given our directory structure) and returns 
+# a data.table of the files and where to read them from 
 speciesTrees <- function(method_name, result_dir) {
   sp_file <- file.path("results", method_name, result_dir) %>% 
     list.files(., full.names = TRUE, recursive = TRUE, pattern = "speciestree")
@@ -115,7 +117,6 @@ speciesTrees <- function(method_name, result_dir) {
 # Returns a data.table of the species tree accuracy (using NRF)
 # Example: spTreeAcc("A-pro", model_true, full_file_name)
 spTreeAcc <- function(method_name, true_tree, species_tree_fp) {
-
   
   result_trees <- lapply(1:nrow(species_tree_fp), function(i) {
     x <- read.tree(species_tree_fp$sp_file[i])
