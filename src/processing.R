@@ -14,8 +14,8 @@ split_by <- c("gene-trees/", "/out.log", "model.")
 
 # all ILS is strong for this data set
 dir11 <- "results/A-pro/data_sets/gene-trees/model.11taxon"
-fullnames11 <- list.files(dir11, full.names = TRUE, recursive = TRUE) %>% 
-  grep("estimated", ., invert = TRUE, value = TRUE)
+fullnames11 <- list.files(dir11, full.names = TRUE, recursive = TRUE)
+  # grep("estimated", ., invert = TRUE, value = TRUE)
 params11 <- list("_", c(1,3,2), "genes") %>% set_names(c("split", "select", "gene_rm"))
 
 # all ILS is strong for this data set
