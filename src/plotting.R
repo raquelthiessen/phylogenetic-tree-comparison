@@ -15,37 +15,37 @@ if (file.exists("results/metrics.txt")) {
 }
 
 
-# Plot 1
-taxon11 <- metrics[taxa == 11 & !is.na(gt_type)] %>% mutate(num_genes = paste0(num_genes, " genes"))
-ggplot(taxon11, aes(x = gt_type, y = seconds, fill = method)) + 
-  geom_bar(stat = "summary", fun = "mean", position = "dodge") +  
-  facet_wrap(~ num_genes) + 
-  scale_fill_brewer(palette = "Set2") + 
-  labs(fill = "Method", x = "Type of input gene tree", y = "Runtime (seconds)", 
-       title = "wQFM dataset - model with 11 taxa")
-ggsave("figs/plot1.png",width = 7.3,height = 7)
+# # Plot 1
+# taxon11 <- metrics[taxa == 11 & !is.na(gt_type)] %>% mutate(num_genes = paste0(num_genes, " genes"))
+# ggplot(taxon11, aes(x = gt_type, y = seconds, fill = method)) + 
+#   geom_bar(stat = "summary", fun = "mean", position = "dodge") +  
+#   facet_wrap(~ num_genes) + 
+#   scale_fill_brewer(palette = "Set2") + 
+#   labs(fill = "Method", x = "Type of input gene tree", y = "Runtime (seconds)", 
+#        title = "wQFM dataset - model with 11 taxa")
+# # ggsave("figs/plot1.png",width = 7.3,height = 7)
 
 
-# Plot 2
-taxon15 <- metrics[taxa == 15] %>% mutate(num_genes = paste0(num_genes, " genes"))
-ggplot(taxon15, aes(x = gt_type, y = seconds, fill = method)) + 
-  geom_bar(stat = "summary", fun = "mean", position = "dodge") +  
-  facet_wrap(~ num_genes) + 
-  scale_fill_brewer(palette = "Set2") + 
-  labs(fill = "Method", x = "Type of input gene tree", y = "Runtime (seconds)", 
-       title = "wQFM dataset - model with 15 taxa")
-ggsave("figs/plot2.png",width = 7.3,height = 7)
+# # Plot 2
+# taxon15 <- metrics[taxa == 15] %>% mutate(num_genes = paste0(num_genes, " genes"))
+# ggplot(taxon15, aes(x = gt_type, y = seconds, fill = method)) + 
+#   geom_bar(stat = "summary", fun = "mean", position = "dodge") +  
+#   facet_wrap(~ num_genes) + 
+#   scale_fill_brewer(palette = "Set2") + 
+#   labs(fill = "Method", x = "Type of input gene tree", y = "Runtime (seconds)", 
+#        title = "wQFM dataset - model with 15 taxa")
+# # ggsave("figs/plot2.png",width = 7.3,height = 7)
 
 
-# Plot 3
-taxon37 <- metrics[taxa == 37] %>% mutate(num_genes = paste0(num_genes, " genes"))
-ggplot(taxon37, aes(x = gt_type, y = seconds, fill = method)) + 
-  geom_bar(stat = "summary", fun = "mean", position = "dodge") +  
-  facet_wrap(~ num_genes) + 
-  scale_fill_brewer(palette = "Set2") + 
-  labs(fill = "Method", x = "Type of input gene tree", y = "Runtime (seconds)", 
-       title = "wQFM dataset - model with 37 taxa")
-ggsave("figs/plot3.png",width = 7.3,height = 7)
+# # Plot 3
+# taxon37 <- metrics[taxa == 37] %>% mutate(num_genes = paste0(num_genes, " genes"))
+# ggplot(taxon37, aes(x = gt_type, y = seconds, fill = method)) + 
+#   geom_bar(stat = "summary", fun = "mean", position = "dodge") +  
+#   facet_wrap(~ num_genes) + 
+#   scale_fill_brewer(palette = "Set2") + 
+#   labs(fill = "Method", x = "Type of input gene tree", y = "Runtime (seconds)", 
+#        title = "wQFM dataset - model with 37 taxa")
+# # ggsave("figs/plot3.png",width = 7.3,height = 7)
 
 
 # Plot 4
@@ -77,14 +77,14 @@ ggplot(metrics, aes(x = method, y = mem_pk, color = method, group = dataset)) +
 ggsave("figs/plot6.png",width = 7.3,height = 7)
 
 
-# Plot 7
-ggplot(metrics, aes(x = method, y = nqs, color = method, group = dataset)) + 
-  geom_point() + stat_summary() + 
-  facet_wrap(~ dataset) + 
-  scale_color_brewer(palette = "Dark2") + 
-  labs(fill = "Method", x = "Methods", y = "Normalized Quartet Score", 
-       title = "Normalized quartet scores for each method")
-ggsave("figs/plot7.png",width = 7.3,height = 7)
+# # Plot 7
+# ggplot(metrics, aes(x = method, y = nqs, color = method, group = dataset)) + 
+#   geom_point() + stat_summary() + 
+#   facet_wrap(~ dataset) + 
+#   scale_color_brewer(palette = "Dark2") + 
+#   labs(fill = "Method", x = "Methods", y = "Normalized Quartet Score", 
+#        title = "Normalized quartet scores for each method")
+# # ggsave("figs/plot7.png",width = 7.3,height = 7)
 
 
 # For one of the datasets, not sure of the number of genes
@@ -109,7 +109,7 @@ ggplot(metrics, aes(x = method, y = NRF, color = method, fill = method)) +
 ggsave("figs/plot8.png",width = 7.3,height = 7)
 
 
-if (file.exists("figs/plot1.png")) {
+if (file.exists("figs/plot4.png")) {
   cat("\nFigures generated, saved to figs/.\n")
 }else {
   cat("Something went wrong. Open up src/plotting.R and check the steps.\n")

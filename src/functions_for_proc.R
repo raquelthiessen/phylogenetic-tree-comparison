@@ -101,27 +101,32 @@ allLogs <- function(method_names, filenames, split_by) {
   }) %>% bind_rows()
 }
 
-
-# Returns a data.table of the species tree accuracy (using NRF)
-# Example: spTreeAcc("A-pro", model_true, full_file_name)
-spTreeAcc <- function(method_name, true_tree, result_dir) {
-  
+# collects species trees (given our directory structure) and returns 
+# a data.table of the files and where to read them from 
+speciesTrees <- function(method_name, result_dir) {
   sp_file <- file.path("results", method_name, result_dir) %>% 
     list.files(., full.names = TRUE, recursive = TRUE, pattern = "speciestree")
   
-  allfiles <- lapply(sp_file, function(x) {
+  species_tree_fp <- lapply(sp_file, function(x) {
     splitString(x,"gene-trees/",2) %>% splitString(.,"/species",1)
   }) %>% data.table(method_name, sp_file, filename = .)
+  return(species_tree_fp)
+}
+
+
+# Returns a data.table of the species tree accuracy (using NRF)
+# Example: spTreeAcc("A-pro", model_true, full_file_name)
+spTreeAcc <- function(method_name, true_tree, species_tree_fp) {
   
-  result_trees <- lapply(1:nrow(allfiles), function(i) {
-    x <- read.tree(allfiles$sp_file[i])
+  result_trees <- lapply(1:nrow(species_tree_fp), function(i) {
+    x <- read.tree(species_tree_fp$sp_file[i])
     # for the cases where the tips have been labeled with floats instead of the 
     # actual integer labels
     if (length(intersect(x$tip.label, true_tree$tip.label)) == 0) {
       x$tip.label <- x$tip.label %>% as.double() %>% floor()
     }
     x
-  }) %>% set_names(allfiles$filename)
+  }) %>% set_names(species_tree_fp$filename)
   
   lapply(1:length(result_trees), function(i) {
     # for one of the dataset types, there is a "true tree" for each file, 
