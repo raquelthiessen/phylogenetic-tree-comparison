@@ -4,7 +4,7 @@ Students: Raquel Thiessen (7813231), Vasena Jayamanna (7902600)
 
 ## Setup
 ### Install Python3 (and R for analysis)
-Currently we are using python 3.8.5 and R version 4.1.2 (latter is for figures and result processing)
+Currently we are using python 3.8.5 and R version 4.1.2 (Latter is for figures and result processing. Note that R version 3.6 or later is enough if you do not need to run src/processing.R, a more recent R version is only required for R package `phangorn`).
 
 ### Install Other Requirements   
 Run: `pip install -r requirements.txt`
@@ -32,8 +32,8 @@ If any of the packages do not run properly, pull from the following and follow t
 
 
 ## Figure Generation
-Run: `Rscript src/processing.R` 
-This will save a _metrics.txt_ file to the _results/_ directory. 
 
-Then run: `Rscript src/plotting.R` 
-This will generate the _figs/_ folder with a series of plots.
+A file of compiled and processed results can be found at _results/metrics.txt_. To replace this file (to check the process or after using different data sets), run `Rscript src/processing.R` after running _src/main.py_. 
+
+Then run `Rscript src/plotting.R` to create the _figs/_ directory and to generate and save the figures. This requires the _results/metrics.txt_ file.
+
