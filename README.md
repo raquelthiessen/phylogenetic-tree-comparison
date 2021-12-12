@@ -4,7 +4,7 @@ Students: Raquel Thiessen (7813231), Vasena Jayamanna (7902600)
 
 ## Setup
 ### Install Python3 (and R for analysis)
-Currently we are using python 3.8.5 and R version 4.1.2 (latter is for figures and result processing)
+Currently we are using python 3.8.5 and R version 4.1.2 (Latter is for figures and result processing. Note that R version 3.6 or later is enough if you do not need to run src/processing.R, a more recent R version is only required for R package `phangorn`).
 
 ### Install Other Requirements   
 Run: `pip install -r requirements.txt`
