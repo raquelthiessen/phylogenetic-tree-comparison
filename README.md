@@ -32,8 +32,8 @@ If any of the packages do not run properly, pull from the following and follow t
 
 
 ## Figure Generation
-Run: `Rscript src/processing.R` 
-This will save a _metrics.txt_ file to the _results/_ directory. 
 
-Then run: `Rscript src/plotting.R` 
-This will generate the _figs/_ folder with a series of plots.
+A file of compiled and processed results can be found at _results/metrics.txt_. To replace this file (to check the process or after using different data sets), run `Rscript src/processing.R` after running the program mentioned above. 
+
+Then run `Rscript src/plotting.R` to create the _figs/_ directory and to generate and save the figures. This requires the _results/metrics.txt_ file.
+
