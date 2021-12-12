@@ -33,7 +33,7 @@ If any of the packages do not run properly, pull from the following and follow t
 
 ## Figure Generation
 
-A file of compiled and processed results can be found at _results/metrics.txt_. To replace this file (to check the process or after using different data sets), run `Rscript src/processing.R` after running the program mentioned above. 
+A file of compiled and processed results can be found at _results/metrics.txt_. To replace this file (to check the process or after using different data sets), run `Rscript src/processing.R` after running _src/main.py_. 
 
 Then run `Rscript src/plotting.R` to create the _figs/_ directory and to generate and save the figures. This requires the _results/metrics.txt_ file.
 
